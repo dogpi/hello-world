@@ -1,0 +1,13 @@
+/home/pi/opencv-4.3.0/opencv_contrib/modules/xfeatures2d/src/boostdesc.cpp:653:20: fatal error: boostdesc_bgm.i: 没有那个文件或目录
+#include "boostdesc_bgm.i"
+^~~~~~~~~~~~~~~~~
+compilation terminated.
+
+download opencv_file.tar.gz
+tar -zxvf opencv_file.tar.gz
+copy all file to /home/pi/opencv-4.3.0/opencv_contrib/modules/xfeatures2d/src/
+
+/home/pi/opencv-4.3.0/opencv_contrib/modules/xfeatures2d/test/test_features2d.cpp:51:10: fatal error: features2d/test/test_detectors_regression.impl.hpp: 没有那个文件或目录
+ #include "features2d/test/test_detectors_regression.impl.hpp"
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
