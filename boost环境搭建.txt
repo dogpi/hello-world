@@ -1,0 +1,36 @@
+源码包下载地址：https://dl.bintray.com/boostorg/release/
+
+tar zxvf  boost_1_72_0.tar.gz
+
+cd boost_1_72_0
+./bootstrap.sh
+./b2 install
+
+b2默认会被安装到”/usr/local/bin/”目录下
+
+INCLUDEPATH += /usr/local/include/boost
+LIBS += -L/usr/local/lib/
+
+#include <iostream>
+#include <boost/version.hpp>
+#include <boost/config.hpp>
+
+using namespace boost;
+using namespace std;
+
+int main()
+{
+    cout << BOOST_VERSION << endl;                 // Boost版本号
+    cout << BOOST_LIB_VERSION << endl;        // Boost版本号
+    cout << BOOST_PLATFORM << endl;             // 操作系统
+    cout << BOOST_COMPILER <<endl;               // 编译器
+    cout << BOOST_STDLIB << endl;                     // 标准库
+    return 0;
+}
+输出：
+107200
+1_72
+linux
+GNU C++ version 7.4.0
+GNU libstdc++ version 20181206
+
