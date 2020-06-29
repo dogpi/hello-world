@@ -11,3 +11,5 @@ copy all file to /home/pi/opencv-4.3.0/opencv_contrib/modules/xfeatures2d/src/
  #include "features2d/test/test_detectors_regression.impl.hpp"
           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 compilation terminated.
+
+opencv/modules/features2d复制到构建目录中(/home/pi/opencv-4.3.0/opencv_contrib/modules/xfeatures2d/test)来解决该问题
