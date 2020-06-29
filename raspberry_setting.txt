@@ -1,0 +1,22 @@
+安装中文输入法scim-pinyin
+sudo apt-get install scim-pinyin
+
+设置系统支持中文
+在终端打开设置界面
+sudo raspi-config
+选择localisation Options,按回车
+
+进入设置页面后选择11 change Locale
+
+选择后进入，一直按方向下键，按空格选择 zh_CN GB2312 , zh_CN.GB18030 GB18030 , zh_CN.GBK GBK , zh_CN.UTF-8 UTF-8 四个选项，左边出现＊号即为选中，按回车确认。
+
+确认后，选择zh_CN.UTF-8,回车确认
+Generating locales (this might take a while)...
+  zh_CN.GB2312... done
+  zh_CN.GB18030... done
+  zh_CN.GBK... done
+  zh_CN.UTF-8... done
+Generation complete.
+
+最后输入命令重启树莓派即可
+sudo reboot
