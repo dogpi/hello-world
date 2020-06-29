@@ -22,3 +22,40 @@
         sudo vim /etc/ld.so.config.d/opencv.conf 添加 /usr/local/lib
 
         sudo ldconfig
+
+INCLUDEPATH += /usr/local/include \
+               /usr/local/include/opencv4 \
+               /usr/local/include/opencv4/opencv2
+
+LIBS += /usr/local/lib/libopencv_highgui.so \
+        /usr/local/lib/libopencv_core.so    \
+        /usr/local/lib/libopencv_imgproc.so \
+        /usr/local/lib/libopencv_imgcodecs.so \
+        /usr/local/lib/*.so
+        
+树莓派上要先通过raspi-config打开摄像头功能
+g++ opencamera.cpp `pkg-config --cflags --libs opencv`
+
+#include <iostream>
+#include <opencv2/opencv.hpp>
+
+using namespace std;
+using namespace cv;
+int main()
+{
+    namedWindow("camera",cv::WINDOW_AUTOSIZE);
+    VideoCapture cap;
+    cap.open(0);
+    Mat frame;
+    for(;;)
+    {
+        cap>>frame;
+        if(frame.empty()) break;
+        imshow("camera",frame);
+        if(waitKey(33)=='q')
+        {
+            break;
+        }
+    }
+    return 0;
+}
